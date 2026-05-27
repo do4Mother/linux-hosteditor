@@ -1,0 +1,11 @@
+name: hosteditor_helper
+description: Privileged side-car for HostEditor — writes /etc/hosts under pkexec.
+publish_to: 'none'
+version: 1.0.0
+
+environment:
+  sdk: ^3.12.0
+
+dev_dependencies:
+  test: ^1.25.0
+  lints: ^4.0.0

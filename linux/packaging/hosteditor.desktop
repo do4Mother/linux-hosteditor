@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=HostEditor
+Comment=Manage /etc/hosts redirects
+Exec=/usr/bin/hosteditor
+Icon=hosteditor
+Terminal=false
+Categories=Utility;Network;

@@ -1,0 +1,52 @@
+import '../models/host.dart';
+
+const initialHosts = <Host>[
+  Host(
+    id: 1,
+    hostname: 'api.acme.com',
+    target: '127.0.0.1',
+    env: Env.dev,
+    active: true,
+    note: 'Local backend',
+    updated: '2 minutes ago',
+  ),
+  Host(
+    id: 2,
+    hostname: 'auth.acme.com',
+    target: '10.0.4.21',
+    env: Env.dev,
+    active: true,
+    note: 'Auth service mirror',
+    updated: '12 minutes ago',
+  ),
+  Host(id: 3, hostname: 'cdn.acme.com', target: '192.168.1.42', env: Env.dev, active: false, updated: 'yesterday'),
+  Host(
+    id: 4,
+    hostname: 'api.staging.acme.com',
+    target: 'stg-edge-04.aws.internal',
+    env: Env.staging,
+    active: true,
+    note: 'Edge proxy',
+    updated: '3 hours ago',
+  ),
+  Host(id: 5, hostname: 'webhook.staging.acme.com', target: '10.50.2.118', env: Env.staging, active: true, updated: '1 day ago'),
+  Host(
+    id: 6,
+    hostname: 'payments.staging.acme.com',
+    target: 'pay-staging.internal',
+    env: Env.staging,
+    active: false,
+    note: 'On hold — waiting on TLS',
+    updated: '2 days ago',
+  ),
+  Host(
+    id: 7,
+    hostname: 'api.acme.com',
+    target: 'prod-edge.acme.com',
+    env: Env.prod,
+    active: false,
+    note: 'Disabled — debugging only',
+    updated: '5 days ago',
+  ),
+  Host(id: 8, hostname: 'metrics.acme.com', target: '10.10.10.10', env: Env.dev, active: true, updated: '8 minutes ago'),
+];
