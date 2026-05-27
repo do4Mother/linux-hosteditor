@@ -18,12 +18,7 @@ class MainPanel extends ConsumerWidget {
   final void Function(Host host, RelativeRect pos) onRowMenu;
   final VoidCallback onBulkDelete;
 
-  const MainPanel({
-    super.key,
-    required this.onNewHost,
-    required this.onRowMenu,
-    required this.onBulkDelete,
-  });
+  const MainPanel({super.key, required this.onNewHost, required this.onRowMenu, required this.onBulkDelete});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -89,7 +84,6 @@ class MainPanel extends ConsumerWidget {
                 const SizedBox(width: 8),
                 HostFilterChip(label: 'Inactive', icon: Icons.pause, selected: filterStatus == 'inactive', onTap: () => setFilter('inactive')),
                 const Spacer(),
-                HostFilterChip(label: 'Sort: Recent', icon: Icons.sort, onTap: () {}),
               ],
             ),
           ),
@@ -128,11 +122,20 @@ class MainPanel extends ConsumerWidget {
                   const SizedBox(width: 16),
                   const Expanded(child: Text('HOSTNAME → TARGET', style: _hdr)),
                   const SizedBox(width: 16),
-                  const SizedBox(width: 72, child: Text('ENV', textAlign: TextAlign.right, style: _hdr)),
+                  const SizedBox(
+                    width: 72,
+                    child: Text('ENV', textAlign: TextAlign.right, style: _hdr),
+                  ),
                   const SizedBox(width: 16),
-                  const SizedBox(width: 80, child: Text('PING', textAlign: TextAlign.right, style: _hdr)),
+                  const SizedBox(
+                    width: 80,
+                    child: Text('PING', textAlign: TextAlign.right, style: _hdr),
+                  ),
                   const SizedBox(width: 16),
-                  const SizedBox(width: 60, child: Text('STATUS', textAlign: TextAlign.center, style: _hdr)),
+                  const SizedBox(
+                    width: 60,
+                    child: Text('STATUS', textAlign: TextAlign.center, style: _hdr),
+                  ),
                   const SizedBox(width: 16),
                   const SizedBox(width: 40),
                 ],
